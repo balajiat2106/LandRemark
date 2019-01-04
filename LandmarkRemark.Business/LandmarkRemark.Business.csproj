@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Locations\Commands\DeleteLocation\" />
+    <Folder Include="Users\Commands\UpdateUser\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LandmarkRemark.Application\LandmarkRemark.Application.csproj" />
+  </ItemGroup>
+
+</Project>
