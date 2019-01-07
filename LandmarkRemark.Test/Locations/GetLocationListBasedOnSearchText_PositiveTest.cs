@@ -27,8 +27,6 @@ namespace LandmarkRemark.Test.Locations
         [TestMethod]
         public void GetLocationBasedOnSearchText_WithValidText_Calls_GetLocationListBasedOnSearchTextQuery_Once()
         {
-            _getLocationListBasedOnSearchTextQuery.Setup(s => s.Execute(It.IsAny<string>())).ReturnsAsync(locationListModel);
-
             var result = _getLocationListBasedOnSearchText.Execute(searchText);
 
             _getLocationListBasedOnSearchTextQuery.Verify(v => v.Execute(It.IsAny<string>()), Times.Once);

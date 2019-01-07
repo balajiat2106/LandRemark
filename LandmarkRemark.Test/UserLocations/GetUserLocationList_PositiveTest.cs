@@ -27,8 +27,6 @@ namespace LandmarkRemark.Test.UserLocations
         [TestMethod]
         public void GetUserLocationList_WithValidUserName_Calls_GetUserLocationListQuery_Once()
         {
-            _getUserLocationListQuery.Setup(s => s.Execute(It.IsAny<string>())).ReturnsAsync(userLocationListModel);
-
             var result = _getUserLocationList.Execute(userName);
 
             _getUserLocationListQuery.Verify(v => v.Execute(It.IsAny<string>()), Times.Once);

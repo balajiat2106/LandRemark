@@ -31,7 +31,7 @@ namespace LandmarkRemark.Test.Locations
 
             var result = _getLocationListBasedOnSearchText.Execute(searchText);
 
-            Assert.AreEqual(result.Result.Count(),0);
+            Assert.AreEqual(0, result.Result.Count());
         }
     }
 }

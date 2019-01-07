@@ -2,10 +2,8 @@
 using LandmarkRemark.Business.Locations.Queries.GetLocationList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace LandmarkRemark.Test.Locations
 {
@@ -29,8 +27,6 @@ namespace LandmarkRemark.Test.Locations
         [TestMethod]
         public void GetLocationBasedOnUserId_WithValidUserId_Calls_GetLocationListBasedOnUserIdQuery_Once()
         {
-            _getLocationListBasedOnUserIdQuery.Setup(s => s.Execute(It.IsAny<int>())).ReturnsAsync(locationListModel);
-
             var result = _getLocationListBasedOnUserId.Execute(1);
 
             _getLocationListBasedOnUserIdQuery.Verify(v => v.Execute(It.IsAny<int>()), Times.Once);

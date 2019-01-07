@@ -34,8 +34,6 @@ namespace LandmarkRemark.Test.Locations
         [TestMethod]
         public void CreateLocation_WithMandatoryParameters_Calls_CreateLocationCommand_Once()
         {            
-            _createLocationCommand.Setup(s => s.Execute(userId, createLocationModel)).ReturnsAsync(1);
-
             Task<int> result = _createLocation.Execute(userId, createLocationModel);
 
             _createLocationCommand.Verify(v => v.Execute(userId, createLocationModel), Times.Once);
