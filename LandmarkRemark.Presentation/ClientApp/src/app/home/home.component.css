@@ -3,13 +3,8 @@
   .body-content {
     padding-top: 50px;
   }
+  
 }
-.floatRight{
-  float:right;
+.col-sm-6{
+  padding-left:15px !important;
 }
-
-.floatLeft{
-  float:left;
-}
-
-

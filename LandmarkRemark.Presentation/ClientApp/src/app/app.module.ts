@@ -40,7 +40,7 @@ import { AlertService } from './services/alert.service';
       { path: 'register', component: RegistrationComponent }
     ]),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyC0u8nYcQrMrIZVxnKYQskuW8LzzdL_Zpg'
+      apiKey: 'AIzaSyC7muZkX8wz4TcwYmc-ycC8fKlVygs_XLU'
     }),
   ],
   providers: [AlertService, UserService, AuthenticationService],

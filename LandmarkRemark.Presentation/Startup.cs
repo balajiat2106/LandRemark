@@ -40,7 +40,7 @@ namespace LandmarkRemark.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var ConnectionString = @"Data Source=(localdb)\v11.0;Initial Catalog=master;Integrated Security=True;Database=LRDB7;Trusted_Connection=True;";
+            var ConnectionString = @"Data Source=DESKTOP-1OVO3CU\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Database=LandmarkRemarkDB1;Trusted_Connection=True;";
             services.AddCors();
             services.AddMvc();
             services.AddDbContext<LandmarkRemarkContext>(o => o.UseSqlServer(ConnectionString));

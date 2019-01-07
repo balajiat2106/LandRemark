@@ -42,8 +42,8 @@ export class LoginComponent {
     this.userService.getByUserName(this.f.username.value)
       .subscribe(
       data => {
-        if (data > 0) {          
-            this.router.navigate([this.returnUrl]);
+        if (data > 0) {
+          this.router.navigate([this.returnUrl]);
             localStorage.setItem('currentUser', this.f.username.value);
             localStorage.setItem('currentId', data.toString());
           }

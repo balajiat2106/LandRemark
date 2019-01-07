@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,10 +8,8 @@ import { Component } from '@angular/core';
 })
 export class NavMenuComponent {
   isExpanded = false;
-  currentUser: string;
-  constructor() {
-    this.currentUser = localStorage.getItem('currentUser');
-  }
+  router: Router;
+  
   collapse() {
     this.isExpanded = false;
   }
@@ -22,5 +21,6 @@ export class NavMenuComponent {
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentId');
   }
 }
