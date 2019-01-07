@@ -10,7 +10,7 @@ namespace LandmarkRemark.Test.Locations
     public class CreateLocation_PositiveTest
     {
         private Mock<ICreateLocationCommand> _createLocationCommand;
-        private CreateLocation _createLocation;
+        private ICreateLocation _createLocation;
         private CreateLocationModel createLocationModel;
         int userId;
 
@@ -42,7 +42,7 @@ namespace LandmarkRemark.Test.Locations
         }
 
         [TestMethod]
-        public void CreateLocation_WithMandatoryParameters_Returns_One()
+        public void CreateLocation_WithMandatoryParameters_Returns_1()
         {
             _createLocationCommand.Setup(s => s.Execute(userId, createLocationModel)).ReturnsAsync(1);
 

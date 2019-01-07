@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Users\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\LandmarkRemark.Business\LandmarkRemark.Business.csproj" />
   </ItemGroup>
 

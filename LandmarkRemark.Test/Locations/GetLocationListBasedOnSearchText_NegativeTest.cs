@@ -25,13 +25,13 @@ namespace LandmarkRemark.Test.Locations
         }
 
         [TestMethod]
-        public void GetLocationBasedOnSearchText_WithInvalidText_Returns_Null()
+        public void GetLocationBasedOnSearchText_WithInvalidText_Returns_ZeroRecords()
         {
             _getLocationListBasedOnSearchTextQuery.Setup(s => s.Execute(It.IsAny<string>())).ReturnsAsync(locationListModel);
 
             var result = _getLocationListBasedOnSearchText.Execute(searchText);
 
-            Assert.AreEqual(result.Result.Count(), 0);
+            Assert.AreEqual(result.Result.Count(),0);
         }
     }
 }

@@ -3,7 +3,7 @@ using LandmarkRemark.Application.Users.Commands.CreateUser;
 
 namespace LandmarkRemark.Business.Users.Commands.CreateUser
 {
-    public class CreateUser:ICreateUser
+    public class CreateUser : ICreateUser
     {
         private readonly ICreateUserCommand _createUserCommand;
 
@@ -13,7 +13,18 @@ namespace LandmarkRemark.Business.Users.Commands.CreateUser
         }
         public async Task<int> Execute(CreateUserModel model)
         {
-            return await _createUserCommand.Execute(model);
+            if (string.IsNullOrEmpty(model.FirstName) ||
+                    string.IsNullOrEmpty(model.LastName) ||
+                        string.IsNullOrEmpty(model.UserName) ||
+                            string.IsNullOrEmpty(model.Password) ||
+                                string.IsNullOrEmpty(model.Email))
+            {
+                return -1;
+            }
+            else
+            {
+                return await _createUserCommand.Execute(model);
+            }
         }
     }
 }

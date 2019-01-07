@@ -10,7 +10,7 @@ namespace LandmarkRemark.Test.Locations
     public class CreateLocation_NegativeTest
     {
         private Mock<ICreateLocationCommand> _createLocationCommand;
-        private CreateLocation _createLocation;
+        private ICreateLocation _createLocation;
         private CreateLocationModel createLocationModel;
         int userId;
 
@@ -34,8 +34,6 @@ namespace LandmarkRemark.Test.Locations
         {
             createLocationModel.Label = string.Empty;
 
-            _createLocationCommand.Setup(l => l.Execute(userId, createLocationModel)).ReturnsAsync(-1);
-
             Task<int> result = _createLocation.Execute(userId, createLocationModel);
 
             _createLocationCommand.Verify(v => v.Execute(userId, createLocationModel), Times.Never);
@@ -45,8 +43,6 @@ namespace LandmarkRemark.Test.Locations
         public void CreateLocation_WithoutRemark_NeverCalls_CreateLocationCommand()
         {            
             createLocationModel.Remark = string.Empty;
-
-            _createLocationCommand.Setup(l => l.Execute(userId, createLocationModel)).ReturnsAsync(-1);
 
             Task<int> result = _createLocation.Execute(userId, createLocationModel);
 
