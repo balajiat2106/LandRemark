@@ -9,7 +9,6 @@ import { AgmCoreModule } from "@agm/core";
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
 import { RegistrationComponent } from './Registration/Registration.component';
 import { LoginComponent } from './Login/Login.component';
 import { AlertComponent } from './directive/UserAlert.component';
@@ -24,7 +23,6 @@ import { AlertService } from './services/alert.service';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
     RegistrationComponent,
     LoginComponent,
     AlertComponent

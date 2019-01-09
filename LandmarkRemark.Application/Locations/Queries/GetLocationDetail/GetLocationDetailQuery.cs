@@ -12,6 +12,11 @@ namespace LandmarkRemark.Application.Locations.Queries.GetLocationDetail
             _landmarkRemarkContext = landmarkRemarkContext;
         }
 
+        /// <summary>
+        /// Get the complete details of specific location
+        /// </summary>
+        /// <param name="id">Specific location id</param>
+        /// <returns>Location details of specific location id</returns>
         public async Task<LocationDetailModel> Execute(int id)
         {
             var entity = await _landmarkRemarkContext.Locations.FindAsync(id);

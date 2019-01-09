@@ -14,8 +14,14 @@ namespace LandmarkRemark.Application.Locations.Queries.GetLocationList
             _landmarkRemarkContext = landmarkRemarkContext;
         }
 
+        /// <summary>
+        /// Gets an list of locations based on the input text
+        /// </summary>
+        /// <param name="searchText">Any string</param>
+        /// <returns>List of locations</returns>
         public async Task<IEnumerable<LocationListModel>> Execute(string searchText)
         {
+            //TODO: Handle exception
             return await _landmarkRemarkContext.Locations.Where(l => l.Remark.Contains(searchText)).Select(l =>
                     new LocationListModel
                     {

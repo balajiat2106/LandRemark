@@ -14,8 +14,13 @@ namespace LandmarkRemark.Application.Users.Queries.GetUserList
             _landmarkRemarkContext = landmarkRemarkContext;
         }
         
+        /// <summary>
+        /// Gets all users from the database
+        /// </summary>
+        /// <returns>User list</returns>
         public async Task<IEnumerable<UserListModel>> Execute()
         {
+            //TODO: Handle exception
             return await _landmarkRemarkContext.Users.Select(u =>
                 new UserListModel
                 {

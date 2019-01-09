@@ -12,6 +12,11 @@ namespace LandmarkRemark.Application.Users.Queries.GetUserDetail
             _landmarkRemarkContext = landmarkRemarkContext;
         }
 
+        /// <summary>
+        /// Gets user details for a specific user 
+        /// </summary>
+        /// <param name="id">Valid user id</param>
+        /// <returns>User details</returns>
         public async Task<UserDetailModel> Execute(int id)
         {
             var entity = await _landmarkRemarkContext.Users.FindAsync(id);

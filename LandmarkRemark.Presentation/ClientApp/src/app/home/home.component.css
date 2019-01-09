@@ -2,9 +2,13 @@
   /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
   .body-content {
     padding-top: 50px;
+    color:gray;
   }
-  
+
 }
-.col-sm-6{
-  padding-left:15px !important;
+
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
 }

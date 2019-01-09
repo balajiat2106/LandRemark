@@ -17,16 +17,25 @@ namespace LandmarkRemark.Test.Locations
 
         [TestInitialize]
         public void TestInitialize()
-        {
-            searchText = "Invalid Text";
+        {            
             locationListModel = new List<LocationListModel>();
             _getLocationListBasedOnSearchTextQuery = new Mock<IGetLocationListBasedOnSearchTextQuery>();
             _getLocationListBasedOnSearchText = new GetLocationListBasedOnSearchText(_getLocationListBasedOnSearchTextQuery.Object);
         }
 
         [TestMethod]
+        public void GetLocationBasedOnSearchText_WithEmptyString_NeverCalls_GetLocationListBasedOnSearchTextQuery()
+        {
+            var result = _getLocationListBasedOnSearchText.Execute(searchText);
+
+            _getLocationListBasedOnSearchTextQuery.Verify(v => v.Execute(searchText), Times.Never);
+        }
+
+        [TestMethod]
         public void GetLocationBasedOnSearchText_WithInvalidText_Returns_ZeroRecords()
         {
+            searchText = "Invalid Text";
+
             _getLocationListBasedOnSearchTextQuery.Setup(s => s.Execute(It.IsAny<string>())).ReturnsAsync(locationListModel);
 
             var result = _getLocationListBasedOnSearchText.Execute(searchText);

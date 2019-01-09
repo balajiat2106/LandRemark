@@ -12,8 +12,16 @@ namespace LandmarkRemark.Application.Locations.Commands.CreateLocation
         {
             _landmarkRemarkContext = landmarkRemarkContext;
         }
+
+        /// <summary>
+        /// Creates a location remark for the respective user
+        /// </summary>
+        /// <param name="userId">Unique user identification number</param>
+        /// <param name="model">CreateLocationModel</param>
+        /// <returns>Number of rows affected</returns>
         public async Task<int> Execute(int userId, CreateLocationModel model)
         {
+            //TODO: Handle exception
             var entity = new Location
             {
                 Label = model.Label,

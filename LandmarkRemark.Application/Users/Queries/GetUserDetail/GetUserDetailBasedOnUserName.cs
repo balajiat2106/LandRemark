@@ -12,9 +12,16 @@ namespace LandmarkRemark.Application.Users.Queries.GetUserDetail
         {
             _landmarkRemarkContext = landmarkRemarkContext;
         }
-        public async Task<UserDetailModel> ExecuteBasedOnUserName(string searchText)
+
+        /// <summary>
+        /// Gets user details based on input text(username)
+        /// </summary>
+        /// <param name="userName">Valid user name</param>
+        /// <returns></returns>
+        public async Task<UserDetailModel> ExecuteBasedOnUserName(string userName)
         {
-            return await _landmarkRemarkContext.Users.Where(u => u.UserName == searchText).Select(u =>
+            //TODO: Handle exception
+            return await _landmarkRemarkContext.Users.Where(u => u.UserName == userName).Select(u =>
                     new UserDetailModel
                     {
                         FirstName = u.FirstName,

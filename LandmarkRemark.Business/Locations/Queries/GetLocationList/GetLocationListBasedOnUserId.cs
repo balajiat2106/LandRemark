@@ -15,6 +15,7 @@ namespace LandmarkRemark.Business.Locations.Queries.GetLocationList
 
         public async Task<IEnumerable<LocationListModel>> Execute(int userId)
         {
+            //NOTE: User validation done on the controller level itself
             return await _getLocationListBasedOnUserIdQuery.Execute(userId);
         }
     }

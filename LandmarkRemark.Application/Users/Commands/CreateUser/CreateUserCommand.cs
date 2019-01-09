@@ -12,8 +12,15 @@ namespace LandmarkRemark.Application.Users.Commands.CreateUser
         {
             _landmarkRemarkContext = landmarkRemarkContext;
         }
+
+        /// <summary>
+        /// Create a user
+        /// </summary>
+        /// <param name="model">Create user model</param>
+        /// <returns>Number of rows affected</returns>
         public async Task<int> Execute(CreateUserModel model)
         {
+            //TODO: Handle exception
             var entity = new User
             {
                 FirstName = model.FirstName,

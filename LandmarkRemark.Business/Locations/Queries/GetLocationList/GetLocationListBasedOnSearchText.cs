@@ -14,7 +14,14 @@ namespace LandmarkRemark.Business.Locations.Queries.GetLocationList
         }
         public async Task<IEnumerable<LocationListModel>> Execute(string searchText)
         {
-            return await _getLocationListBasedOnSearchTextQuery.Execute(searchText);
+            if (string.IsNullOrEmpty(searchText))
+            {
+                return null;
+            }
+            else
+            {
+                return await _getLocationListBasedOnSearchTextQuery.Execute(searchText);
+            }
         }
     }
 }

@@ -13,7 +13,12 @@ namespace LandmarkRemark.Application.Locations.Queries.GetLocationList
         {
             _landmarkRemarkContext = landmarkRemarkContext;
         }
-        
+
+        /// <summary>
+        /// Gets an list of locations based on the input user id
+        /// </summary>
+        /// <param name="userId">Any valid user id</param>
+        /// <returns>List of locations</returns>
         public async Task<IEnumerable<LocationListModel>> Execute(int userId)
         {            
             return await _landmarkRemarkContext.Locations.Where(l=>l.UserId==userId).Select(l =>

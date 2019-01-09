@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Locations\Commands\DeleteLocation\" />
-    <Folder Include="Users\Commands\UpdateUser\" />
+    <Compile Remove="Locations\Commands\DeleteLocation\**" />
+    <Compile Remove="Users\Commands\UpdateUser\**" />
+    <EmbeddedResource Remove="Locations\Commands\DeleteLocation\**" />
+    <EmbeddedResource Remove="Users\Commands\UpdateUser\**" />
+    <None Remove="Locations\Commands\DeleteLocation\**" />
+    <None Remove="Users\Commands\UpdateUser\**" />
   </ItemGroup>
 
   <ItemGroup>

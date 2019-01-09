@@ -1,7 +1,5 @@
 ﻿using LandmarkRemark.Application.UserLocation.Queries;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LandmarkRemark.Business.UserLocations.Queries

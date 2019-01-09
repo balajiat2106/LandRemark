@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace LandmarkRemark.Application.Locations.Commands.CreateLocation
 {
@@ -16,6 +13,5 @@ namespace LandmarkRemark.Application.Locations.Commands.CreateLocation
         public double Longitude { get; set; }
         [Required]
         public string Remark { get; set; }
-
     }
 }

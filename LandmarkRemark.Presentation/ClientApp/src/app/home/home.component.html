@@ -1,77 +1,99 @@
-<div class="row">
-  <div class="col-md-12">
-    <form [formGroup]="locationForm">
-      <div class="form-group">
-        <div class="col-md-6">
-          <input type="text" formControlName="searchTextControl" class="form-control" placeholder="Search Text" />
-        </div>
-        <div class="col-md-6">
-          <button (click)="SearchLocationBasedOnText()" class="btn btn-primary">Search By Remark</button>
-          <button (click)="SearchLocationBasedOnUserName()" class="btn btn-primary">Search By Username</button>
-        </div>
-      </div>
-    </form>
-  </div><br /><br />
-  <div class="col-md-12">
-    <div class="col-md-4">
-      <agm-map [longitude]="coordinates.longitude" [latitude]="coordinates.latitude" style="height:400px;" [usePanning]="true" (mapClick)="OnChoseLocation($event)">
-        <!-- This marker gets all the pins for a particular user or for a specific search text -->
-        <agm-marker *ngFor="let lm of LocationMarkers;"
-                    (markerClick)="ClickedMarker(lm.remark, lm.label)"
-                    [latitude]=lm.latitude
-                    [longitude]=lm.longitude>
-          <!-- This info is a kind of tooltip which gives more information about a marker -->
-          <agm-info-window>
-            <strong>{{currentClickRemark}}</strong>
-          </agm-info-window>
-        </agm-marker>
-        <!-- This marker enables the current location -->
-        <agm-marker [latitude]=coordinates.latitude
-                    [longitude]=coordinates.longitude>
-        </agm-marker>
-        <!-- ADDITIONAL FEATURE: A new location can be selected for placing remarks -->
-        <agm-marker [latitude]=currentClickLatitude
-                    [longitude]=currentClickLongitude>
-        </agm-marker>
-      </agm-map>
-      <!-- TODO: Recenter option to be implemented -->
-      <!--<button (click)="ResetToCurrentLocation()" class="btn btn-primary pull-left">Re-center</button>-->
-      <button (click)="GetLocationsForUser()" class="btn btn-primary">Show My Remarks</button>
-    </div>
-    <div class="col-md-4">
-      <form [formGroup]="locationForm">
+<div class='navbar navbar-inverse'>
+  <div class='navbar-header'>
+    
+    <span class='navbar-brand'>Hi {{currentUser}}</span>
+  </div><div class='clearfix'></div>
+</div>
+<div class="col-md-12 padding-0">
+  
+    <div class="col-md-9 padding-0">
+      <div class="col-md-12 padding-0">
         <div class="panel panel-default">
-          <div class="panel-heading">Add remark</div>
           <div class="panel-body">
-            <div class="form-group">
-              <input type="text" formControlName="locationLabel" class="form-control" placeholder="Label" />
-            </div>
-            <div class="form-group">
-              <textarea type="text" formControlName="locationRemark" class="form-control" placeholder="Remark"></textarea>
-            </div>
-            <div class="form-group">
-              <button (click)="AddLocationsForUser()" class="btn btn-primary">Submit</button>
+            <div class="col-md-12 padding-0">
+              <form [formGroup]="locationForm">
+                <div class="form-group">
+                  <input type="text" formControlName="searchTextControl" class="form-control" placeholder="Search Text" />
+                  <button title="Search by Username" (click)="SearchLocationBasedOnUserName()" class="pull-left"><span class="glyphicon glyphicon-user"></span></button>
+                  <button title="Search by Remark" (click)="SearchLocationBasedOnText()" class="pull-right"><span class="glyphicon glyphicon-comment"></span></button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </form>
-      <div>
-        <table class='table'>
-          <!--Header will be displayed only when data is available-->
-          <thead *ngIf="LocationMarkers.length>0">
-            <tr>
-              <th>Label</th>
-              <th>Remark</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let l of LocationMarkers">
-              <td>{{ l.label }}</td>
-              <td>{{ l.remark }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <agm-map #CurrentMap [longitude]="currentClickLongitude" [latitude]="currentClickLatitude" style="height:800px;width:auto">
+          <!--(mapClick)="OnChoseLocation($event)"-->
+          <!-- This marker gets all the pins for a particular user or for a specific search text -->
+          <agm-marker *ngFor="let lm of LocationMarkers;"
+                      [latitude]=lm.latitude
+                      [longitude]=lm.longitude>
+            <!-- This info is a kind of tooltip which gives more information about a marker -->
+            <agm-info-window>
+              <div>
+                <div>
+                  <strong>{{lm.label}}</strong><br>
+                </div>
+                <hr />
+                <div>
+                  <blockquote class="customBlockQuote">
+                    <span>{{lm.remark}}</span>
+                  </blockquote>
+                </div>
+              </div>
+
+            </agm-info-window>
+          </agm-marker>
+          <!-- This marker enables the current location -->
+          <agm-marker [latitude]=coordinates.latitude
+                      [longitude]=coordinates.longitude>
+            <agm-info-window>
+              <form [formGroup]="locationForm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Add remark</div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <input type="text" formControlName="locationLabel" class="form-control" placeholder="Label" />
+                      <div *ngIf="submitted && f.locationLabel.errors" style="color:red">
+                        <div *ngIf="f.locationLabel.errors.required">Label is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea type="text" formControlName="locationRemark" class="form-control" placeholder="Remark"></textarea>
+                      <div *ngIf="submitted && f.locationRemark.errors" style="color:red">
+                        <div *ngIf="f.locationRemark.errors.required">Remark is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button (click)="AddLocationsForUser()" class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </agm-info-window>
+          </agm-marker>
+          <!-- ADDITIONAL FEATURE: A new location can be selected for placing remarks -->
+          <!--<agm-marker [latitude]=currentClickLatitude
+                      [longitude]=currentClickLongitude>
+          </agm-marker>-->
+        </agm-map>
       </div>
     </div>
+    <div class="col-md-3">
+      <table class='table'>
+        <!--Header will be displayed only when data is available-->
+        <thead *ngIf="LocationMarkers.length>0">
+          <tr>
+            <th>Label</th>
+            <th>Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let l of LocationMarkers">
+            <td>{{ l.label }}</td>
+            <td>{{ l.remark }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+

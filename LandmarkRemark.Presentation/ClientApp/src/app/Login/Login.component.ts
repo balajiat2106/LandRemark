@@ -10,8 +10,17 @@ import { UserService } from '../services/user.service';
   templateUrl: './Login.component.html',
 })
 
+export interface ILoginModel {
+  Username: string,
+  Password: string
+}
+
 export class LoginComponent {
   loginForm: FormGroup;
+  loginModel: ILoginModel = {
+    Username: '',
+    Password: ''
+  }
   returnUrl: string;
 
   constructor(
@@ -23,8 +32,8 @@ export class LoginComponent {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
+      Username: ['', Validators.required],
+      Password: ['', Validators.required]
     });
     
     // get return url from route parameters or default to '/'
@@ -39,6 +48,14 @@ export class LoginComponent {
     if (this.loginForm.invalid) {
       return;
     }
+
+    const loginModel: ILoginModel = this.loginForm.value as ILoginModel;
+
+    this.authService.login(loginModel, () => {
+      //if the user is redirected to the login page from a restricted page, he is redirected to the same again after login
+      this.router.navigate([this.authService.lastRestrictedPage || '/']);
+    });
+
     this.userService.getByUserName(this.f.username.value)
       .subscribe(
       data => {

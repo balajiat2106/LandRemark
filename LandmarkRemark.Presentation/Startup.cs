@@ -3,20 +3,21 @@ using LandmarkRemark.Application.Locations.Queries.GetLocationDetail;
 using LandmarkRemark.Application.Locations.Queries.GetLocationList;
 using LandmarkRemark.Application.UserLocation.Queries;
 using LandmarkRemark.Application.Users.Commands.CreateUser;
-using LandmarkRemark.Application.Users.Commands.DeleteUser;
 using LandmarkRemark.Application.Users.Queries.GetUserDetail;
 using LandmarkRemark.Application.Users.Queries.GetUserList;
 using LandmarkRemark.Application.Users.Queries.UserLogin;
+
 using LandmarkRemark.Business.Locations.Commands.CreateLocation;
 using LandmarkRemark.Business.Locations.Queries.GetLocationDetail;
 using LandmarkRemark.Business.Locations.Queries.GetLocationList;
 using LandmarkRemark.Business.UserLocations.Queries;
 using LandmarkRemark.Business.Users.Commands.CreateUser;
-using LandmarkRemark.Business.Users.Commands.DeleteUser;
 using LandmarkRemark.Business.Users.Queries.GetUserDetail;
 using LandmarkRemark.Business.Users.Queries.GetUserList;
 using LandmarkRemark.Business.Users.Queries.UserLogin;
+
 using LandmarkRemark.Context;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -41,18 +42,21 @@ namespace LandmarkRemark.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             var ConnectionString = @"Data Source=DESKTOP-1OVO3CU\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Database=LandmarkRemarkDB1;Trusted_Connection=True;";
+
             services.AddCors();
             services.AddMvc();
             services.AddDbContext<LandmarkRemarkContext>(o => o.UseSqlServer(ConnectionString));
+            
             //***Services from application repo***
             //User repo services
             services.AddScoped<ICreateUserCommand, CreateUserCommand>();
-            services.AddScoped<IDeleteUserCommand, DeleteUserCommand>();
             services.AddScoped<IGetUserDetailQuery, GetUserDetailQuery>();
             services.AddScoped<IGetUserListQuery, GetUserListQuery>();
             services.AddScoped<IUserLoginQuery, UserLoginQuery>();
+            
             //User lcoation repo services
             services.AddScoped<IGetUserLocationListQuery, GetUserLocationListQuery>();
+            
             //Location repo services
             services.AddScoped<ICreateLocationCommand, CreateLocationCommand>();
             services.AddScoped<IGetLocationDetailQuery, GetLocationDetailQuery>(); 
@@ -62,7 +66,6 @@ namespace LandmarkRemark.Presentation
             //***Services from business***
             //User services
             services.AddScoped<ICreateUser, CreateUser>();
-            services.AddScoped<IDeleteUser, DeleteUser>();
             services.AddScoped<IGetUserDetail, GetUserDetail>(); 
             services.AddScoped<IGetUserList, GetUserList>();
             services.AddScoped<IGetUserDetailBasedOnUserName, GetUserDetailBasedOnUserName>();
@@ -94,6 +97,7 @@ namespace LandmarkRemark.Presentation
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
+
             app.UseSwaggerUi3(typeof(Startup).GetTypeInfo().Assembly);
             app.UseCors();
             app.UseHttpsRedirection();
@@ -109,9 +113,6 @@ namespace LandmarkRemark.Presentation
             
             app.UseSpa(spa =>
             {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
-
                 spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
