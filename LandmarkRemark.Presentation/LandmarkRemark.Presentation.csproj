@@ -28,10 +28,17 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\bootstrap-toggle.min.css" />
+    <None Remove="ClientApp\src\config\app-config.interface.ts" />
+    <None Remove="ClientApp\src\config\app-config.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LandmarkRemark.Business\LandmarkRemark.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\config\app-config.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\src\config\app-config.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

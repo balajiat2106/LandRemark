@@ -22,11 +22,16 @@
           </div>
         </div>
       </div>
+      <div class="row margin-0">
+        <button (click)="GetLocationsForUser()" class="pull-left">My remarks</button>
+        <button (click)="ReCenter()" class="pull-right">Recenter</button>
+      </div>
       <agm-map #CurrentMap [longitude]="currentClickLongitude" [latitude]="currentClickLatitude" style="height:800px;width:auto">
         <!-- This marker gets all the pins for a particular user or for a specific search text -->
         <agm-marker *ngFor="let lm of LocationMarkers;"
                     [latitude]=lm.latitude
-                    [longitude]=lm.longitude>
+                    [longitude]=lm.longitude
+                    [iconUrl]="otherLocationIcon">
           <!-- This info is a kind of tooltip which gives more information about a marker -->
           <agm-info-window>
             <div>
@@ -44,7 +49,8 @@
         </agm-marker>
         <!-- This marker enables the current location -->
         <agm-marker [latitude]=coordinates.latitude
-                    [longitude]=coordinates.longitude>
+                    [longitude]=coordinates.longitude
+                    [iconUrl]="currentLocationIcon">
           <agm-info-window>
             <form [formGroup]="locationForm">
               <div class="panel panel-default">

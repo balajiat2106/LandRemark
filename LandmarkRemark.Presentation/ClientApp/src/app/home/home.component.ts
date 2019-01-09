@@ -27,10 +27,18 @@ export class HomeComponent {
   coordinates;
   searched = false;
   submitted = false;
+  currentLocationIcon: string;
+  otherLocationIcon: string;
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private formBuilder: FormBuilder, private alertService: AlertService) {    
+  constructor(private http: HttpClient,
+              @Inject('BASE_URL') private baseUrl: string,
+              private formBuilder: FormBuilder,
+              private alertService: AlertService) {    
+
     this.currentId = +localStorage.getItem('currentId');
     this.currentUser = localStorage.getItem('currentUser');
+    this.currentLocationIcon = '/assets/current.png';
+    this.otherLocationIcon = '/assets/other.png';
   }
 
   // convenience getter for easy access to form fields
@@ -63,6 +71,8 @@ export class HomeComponent {
 
   //generic get location method that operates based on the url
   GetLocation(url: string) {
+    this.LocationMarkers = [];
+
     this.http.get<Location[]>(url).subscribe(result => {
       if (result.length > 0) {
         this.LocationMarkers = this.LocationMarkers.concat(result);
