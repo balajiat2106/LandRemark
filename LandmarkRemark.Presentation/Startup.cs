@@ -17,15 +17,17 @@ using LandmarkRemark.Business.Users.Queries.GetUserList;
 using LandmarkRemark.Business.Users.Queries.UserLogin;
 
 using LandmarkRemark.Context;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using NSwag.AspNetCore;
 using System.Reflection;
+using System.Text;
 
 namespace LandmarkRemark.Presentation
 {
@@ -37,16 +39,16 @@ namespace LandmarkRemark.Presentation
         }
 
         public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             var ConnectionString = @"Data Source=DESKTOP-1OVO3CU\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Database=LandmarkRemarkDB1;Trusted_Connection=True;";
-
+                       
             services.AddCors();
             services.AddMvc();
             services.AddDbContext<LandmarkRemarkContext>(o => o.UseSqlServer(ConnectionString));
-            
+
             //***Services from application repo***
             //User repo services
             services.AddScoped<ICreateUserCommand, CreateUserCommand>();
@@ -97,12 +99,13 @@ namespace LandmarkRemark.Presentation
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-
+                        
             app.UseSwaggerUi3(typeof(Startup).GetTypeInfo().Assembly);
             app.UseCors();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

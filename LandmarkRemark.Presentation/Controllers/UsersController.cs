@@ -29,16 +29,6 @@ namespace LandmarkRemark.Presentation.Controllers
         {            
         }
         
-        [HttpGet("{userName}")]
-        [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
-        public IActionResult GetUser([FromRoute] string userName)
-        {
-            var result =_userLogin.Execute(userName);
-
-            return (result > 0) ? Ok(result): (IActionResult)NotFound();
-        }
-
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(IEnumerable<UserListModel>), (int)HttpStatusCode.OK)]

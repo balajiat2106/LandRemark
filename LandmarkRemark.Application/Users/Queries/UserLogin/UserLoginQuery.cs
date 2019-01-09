@@ -16,10 +16,10 @@ namespace LandmarkRemark.Application.Users.Queries.UserLogin
         /// </summary>
         /// <param name="userName">Valid user name</param>
         /// <returns>User id</returns>
-        public int Execute(string userName)
+        public int Execute(UserLoginModel userLoginModel)
         {
             //TODO: Handle exception
-            return _landmarkRemarkContext.Users.Where(u => u.UserName == userName).Select(i => i.Id).SingleOrDefault();
+            return _landmarkRemarkContext.Users.Where(u => u.UserName == userLoginModel.UserName && u.Password==userLoginModel.Password).Select(i => i.Id).SingleOrDefault();
         }
     }
 }

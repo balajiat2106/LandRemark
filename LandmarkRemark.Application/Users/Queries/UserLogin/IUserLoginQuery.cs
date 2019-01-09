@@ -2,6 +2,6 @@
 {
     public interface IUserLoginQuery
     {
-        int Execute(string userName);
+        int Execute(UserLoginModel userLoginModel);
     }
 }

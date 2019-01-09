@@ -34,3 +34,5 @@ D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\Lan
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.csproj.CopyComplete
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.dll
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.pdb
+D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.dll
+D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.xml

@@ -11,9 +11,9 @@ namespace LandmarkRemark.Business.Users.Queries.UserLogin
             _userLoginQuery = userLoginQuery;
         }
 
-        public int Execute(string userName)
+        public int Execute(UserLoginModel userLoginModel)
         {
-            return _userLoginQuery.Execute(userName);
+            return _userLoginQuery.Execute(userLoginModel);
         }
     }
 }

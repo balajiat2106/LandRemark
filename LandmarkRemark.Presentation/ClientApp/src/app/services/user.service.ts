@@ -11,10 +11,6 @@ export class UserService {
     return this.http.get<User[]>(`/users`);
   }
 
-  getByUserName(userName: string) {
-    return this.http.get(this.baseUrl + "api/user/" + userName);
-  }
-
   register(user: User) {
     return this.http.post(this.baseUrl + "api/user/", user);
   }

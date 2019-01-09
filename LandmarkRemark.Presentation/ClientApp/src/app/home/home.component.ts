@@ -25,6 +25,7 @@ export class HomeComponent {
   newLocation: Location;
   LocationMarkers: Location[] = [];
   coordinates;
+  searched = false;
   submitted = false;
 
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private formBuilder: FormBuilder, private alertService: AlertService) {    
@@ -34,20 +35,10 @@ export class HomeComponent {
 
   // convenience getter for easy access to form fields
   get f() { return this.locationForm.controls; }
-
-  //ADDITIONAL FEATURE:
-  //step 1: click on a location
-  //step 2: fill the label and remark for the location
-  //step 3: click on submit button will trigger this event
-  //OnChoseLocation(event) {
-  //  this.currentClickLatitude = event.coords.lat;
-  //  this.currentClickLongitude = event.coords.lng;
-  //  this.locationChosen = true;
-  //  this.LocationMarkers.push({ Id: 0, Label: "", Latitude: event.coords.lat, Longitude: event.coords.lng, Remark: "" });
-  //}
-
+  
   //This method will get records by comparing the input text with remarks field(contains criteria)
   SearchLocationBasedOnText() {
+    this.searched = true;
     this.LocationMarkers = [];
 
     this.GetLocation(this.baseUrl + 'api/location/' + this.f.searchTextControl.value + '/text');
@@ -55,6 +46,7 @@ export class HomeComponent {
 
   //This method will get records by comparing the input text with username field(exact match criteria)
   SearchLocationBasedOnUserName() {
+    this.searched = true;
     this.LocationMarkers = [];
 
     this.GetLocation(this.baseUrl + 'api/location/' + this.f.searchTextControl.value + '/user');
@@ -133,7 +125,7 @@ export class HomeComponent {
     this.locationForm = this.formBuilder.group({
       locationLabel: ['', Validators.required],
       locationRemark: ['', Validators.required],
-      searchTextControl: ['']
+      searchTextControl: ['', Validators.required]
     });
   }
 }
