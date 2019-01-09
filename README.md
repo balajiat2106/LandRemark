@@ -16,20 +16,20 @@ Note: Once the application is running, the database will be seeded with minimal 
 
     - As a User, I can see their current location on the map
     - As a User, I can save a short note at their current location
-    . As a User, I can see notes that they have saved at the location they were saved on the map
     - As a User, I can see the location, text, and user-name of notes other users have saved
     - As a User, I have the ability to search for a note based on contained text or user-name
+    - As a User, I can see notes that they have saved at the location they were saved on the map
     
 # Implicit Requirements
 
-    - User should be able to identify notes saved by him and others by a distinguished marker.
-    - The current location may be shown with a unique marker.
-    - Re-center button is available to get the user back to the current location, in case if the user navigates to other location.
-    - Taken care of admin role and provided implementation for user management
-    - User active/inactive status can be managed
-    - Since the requirements involve multiple users, a screen to provide their username (or login credentials) should be given.
-    - All the notes are persisted in the backend.
     - Swapper UI facilitated
+    - All the notes are persisted in the backend
+    - User active/inactive status can be managed
+    - The current location may be shown with a unique marker
+    - Taken care of admin role and provided implementation for user management
+    - User should be able to identify notes saved by him and others by a distinguished marker
+    - Since the requirements involve multiple users, a screen to provide their username (or login credentials) should be given
+    - Re-center button is available to get the user back to the current location, in case if the user navigates to other location
  
 # Effort
 
