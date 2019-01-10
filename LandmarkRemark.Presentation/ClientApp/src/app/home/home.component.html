@@ -9,11 +9,11 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="col-md-12 padding-0">
-            <form [formGroup]="locationForm">
+            <form [formGroup]="searchForm">
               <div class="form-group">
                 <input type="text" formControlName="searchTextControl" class="form-control" placeholder="Search Text" />
-                <div *ngIf="searched && f.searchTextControl.errors" style="color:red">
-                  <div *ngIf="f.searchTextControl.errors.required">Search text is required</div>
+                <div *ngIf="searched && s.searchTextControl.errors" style="color:red">
+                  <div *ngIf="s.searchTextControl.errors.required">Search text is required</div>
                 </div>
                 <button title="Search by Username" (click)="SearchLocationBasedOnUserName()" class="pull-left"><span class="glyphicon glyphicon-user"></span></button>
                 <button title="Search by Remark" (click)="SearchLocationBasedOnText()" class="pull-right"><span class="glyphicon glyphicon-comment"></span></button>

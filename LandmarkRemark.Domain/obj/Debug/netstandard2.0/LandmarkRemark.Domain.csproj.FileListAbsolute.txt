@@ -36,3 +36,17 @@ D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\Lan
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.pdb
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.dll
 D:\MyHobbyProjects\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.xml
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\LandmarkRemark.Domain.deps.json
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\LandmarkRemark.Domain.dll
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\LandmarkRemark.Domain.pdb
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.dll
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\Microsoft.IdentityModel.Tokens.xml
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.csprojAssemblyReference.cache
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.csproj.CoreCompileInputs.cache
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.AssemblyInfoInputs.cache
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.AssemblyInfo.cs
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.csproj.CopyComplete
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.dll
+D:\GitFolder\LandRemark\LandmarkRemark.Domain\obj\Debug\netstandard2.0\LandmarkRemark.Domain.pdb

@@ -40,10 +40,12 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -193,23 +195,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\balaj\\.nuget\\packages\\": {},
+    "C:\\Users\\balaji.prabakaran\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyHobbyProjects\\LandRemark\\LandmarkRemark.Context\\LandmarkRemark.Context.csproj",
+      "projectUniqueName": "D:\\GitFolder\\LandRemark\\LandmarkRemark.Context\\LandmarkRemark.Context.csproj",
       "projectName": "LandmarkRemark.Context",
-      "projectPath": "D:\\MyHobbyProjects\\LandRemark\\LandmarkRemark.Context\\LandmarkRemark.Context.csproj",
-      "packagesPath": "C:\\Users\\balaj\\.nuget\\packages\\",
-      "outputPath": "D:\\MyHobbyProjects\\LandRemark\\LandmarkRemark.Context\\obj\\",
+      "projectPath": "D:\\GitFolder\\LandRemark\\LandmarkRemark.Context\\LandmarkRemark.Context.csproj",
+      "packagesPath": "C:\\Users\\balaji.prabakaran\\.nuget\\packages\\",
+      "outputPath": "D:\\GitFolder\\LandRemark\\LandmarkRemark.Context\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\balaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\balaji.prabakaran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -222,8 +224,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\MyHobbyProjects\\LandRemark\\LandmarkRemark.Domain\\LandmarkRemark.Domain.csproj": {
-              "projectPath": "D:\\MyHobbyProjects\\LandRemark\\LandmarkRemark.Domain\\LandmarkRemark.Domain.csproj"
+            "D:\\GitFolder\\LandRemark\\LandmarkRemark.Domain\\LandmarkRemark.Domain.csproj": {
+              "projectPath": "D:\\GitFolder\\LandRemark\\LandmarkRemark.Domain\\LandmarkRemark.Domain.csproj"
             }
           }
         }

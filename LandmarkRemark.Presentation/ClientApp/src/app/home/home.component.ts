@@ -22,6 +22,7 @@ export class HomeComponent {
   currentClickRemark: string;
   locationChosen: boolean = false;
   locationForm: FormGroup;
+  searchForm: FormGroup;
   newLocation: Location;
   LocationMarkers: Location[] = [];
   coordinates;
@@ -43,21 +44,31 @@ export class HomeComponent {
 
   // convenience getter for easy access to form fields
   get f() { return this.locationForm.controls; }
-  
+
+  get s() { return this.searchForm.controls; }
+
   //This method will get records by comparing the input text with remarks field(contains criteria)
   SearchLocationBasedOnText() {
     this.searched = true;
     this.LocationMarkers = [];
+    // stop here if form is invalid
+    if (this.searchForm.invalid) {
+      return;
+    }
 
-    this.GetLocation(this.baseUrl + 'api/location/' + this.f.searchTextControl.value + '/text');
+    this.GetLocation(this.baseUrl + 'api/location/' + this.s.searchTextControl.value + '/text');
   }
 
   //This method will get records by comparing the input text with username field(exact match criteria)
   SearchLocationBasedOnUserName() {
     this.searched = true;
     this.LocationMarkers = [];
+    // stop here if form is invalid
+    if (this.searchForm.invalid) {
+      return;
+    }
 
-    this.GetLocation(this.baseUrl + 'api/location/' + this.f.searchTextControl.value + '/user');
+    this.GetLocation(this.baseUrl + 'api/location/' + this.s.searchTextControl.value + '/user');
   }
 
   //This method will get records for a specific user id
@@ -134,7 +145,9 @@ export class HomeComponent {
     this.SetCurrentLocation();
     this.locationForm = this.formBuilder.group({
       locationLabel: ['', Validators.required],
-      locationRemark: ['', Validators.required],
+      locationRemark: ['', Validators.required]
+    });
+    this.searchForm = this.formBuilder.group({
       searchTextControl: ['', Validators.required]
     });
   }

@@ -19,15 +19,12 @@ using LandmarkRemark.Business.Users.Queries.UserLogin;
 using LandmarkRemark.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
 using NSwag.AspNetCore;
 using System.Reflection;
-using System.Text;
 
 namespace LandmarkRemark.Presentation
 {
@@ -43,7 +40,7 @@ namespace LandmarkRemark.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var ConnectionString = @"Data Source=DESKTOP-1OVO3CU\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Database=LandmarkRemarkDB1;Trusted_Connection=True;";
+            var ConnectionString = @"Data Source=(localdb)\v11.0;Initial Catalog=master;Integrated Security=True;Database=LRDB7;Trusted_Connection=True;";
                        
             services.AddCors();
             services.AddMvc();
