@@ -1,0 +1,13 @@
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.deps.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.runtimeconfig.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.runtimeconfig.dev.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.csprojAssemblyReference.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.csproj.CoreCompileInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.RazorAssemblyInfo.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.RazorAssemblyInfo.cs
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.AssemblyInfoInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.AssemblyInfo.cs
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.RazorTargetAssemblyInfo.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.csproj.CopyComplete
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Presentation\Debug\netcoreapp2.1\LandmarkRemark.Presentation.dll

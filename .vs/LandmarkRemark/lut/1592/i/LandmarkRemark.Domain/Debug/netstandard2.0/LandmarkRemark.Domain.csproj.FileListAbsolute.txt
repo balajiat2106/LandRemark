@@ -1,0 +1,8 @@
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.deps.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.csprojAssemblyReference.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.csproj.CoreCompileInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.AssemblyInfoInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.AssemblyInfo.cs
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.csproj.CopyComplete
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Domain\Debug\netstandard2.0\LandmarkRemark.Domain.dll

@@ -41,5 +41,16 @@ namespace LandmarkRemark.Test.UserLocations
 
             Assert.IsTrue(result.Result.All(a => a.UserName == userName));
         }
+
+        [TestMethod]
+        public void GetUserLocationList_WithValidUserNameWithNoRecords_Returns_ZeroRecords()
+        {
+            userName = "user20";
+            _getUserLocationListQuery.Setup(s => s.Execute(It.IsAny<string>())).ReturnsAsync(userLocationListModel);
+
+            var result = _getUserLocationList.Execute(userName);
+
+            Assert.AreEqual(0, result.Result.Count());
+        }
     }
 }

@@ -1,0 +1,13 @@
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.deps.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.runtimeconfig.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.runtimeconfig.dev.json
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\b\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.csproj.CoreCompileInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.AssemblyInfoInputs.cache
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.AssemblyInfo.cs
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.csproj.CopyComplete
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.dll
+D:\GitFolder\LandRemark\.vs\LandmarkRemark\lut\0\i\LandmarkRemark.Test\Debug\netcoreapp2.1\LandmarkRemark.Test.csprojAssemblyReference.cache

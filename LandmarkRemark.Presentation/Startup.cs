@@ -76,12 +76,6 @@ namespace LandmarkRemark.Presentation
             services.AddScoped<IGetLocationDetail, GetLocationDetail>();
             services.AddScoped<IGetLocationListBasedOnUserId, GetLocationListBasedOnUserId>();
             services.AddScoped<IGetLocationListBasedOnSearchText, GetLocationListBasedOnSearchText>();
-            
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/dist";
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,6 +87,7 @@ namespace LandmarkRemark.Presentation
             }
             else
             {
+                //TODO:
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
@@ -100,10 +95,7 @@ namespace LandmarkRemark.Presentation
             app.UseSwaggerUi3(typeof(Startup).GetTypeInfo().Assembly);
             app.UseCors();
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseSpaStaticFiles();
-            app.UseAuthentication();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

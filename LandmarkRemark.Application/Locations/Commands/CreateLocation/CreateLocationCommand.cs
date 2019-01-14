@@ -1,5 +1,6 @@
 ﻿using LandmarkRemark.Context;
 using LandmarkRemark.Domain;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace LandmarkRemark.Application.Locations.Commands.CreateLocation
@@ -33,7 +34,7 @@ namespace LandmarkRemark.Application.Locations.Commands.CreateLocation
 
             _landmarkRemarkContext.Locations.Add(entity);
 
-            return await _landmarkRemarkContext.SaveChangesAsync();                      
+            return await _landmarkRemarkContext.SaveChangesAsync();
         }
     }
 }

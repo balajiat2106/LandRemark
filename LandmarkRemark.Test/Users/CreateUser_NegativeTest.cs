@@ -3,8 +3,6 @@ using LandmarkRemark.Business.Users.Commands.CreateUser;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LandmarkRemark.Test.Users
